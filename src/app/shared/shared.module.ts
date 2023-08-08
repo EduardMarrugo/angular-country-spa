@@ -3,9 +3,10 @@ import { NgModule } from '@angular/core';
 import { AboutPageComponent } from './pages/about-page/about-page.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
-import { AppRoutingModule } from '../app-routing.module';
+
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 import { SearchBoxComponent } from './search-box/search-box.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,7 @@ import { SearchBoxComponent } from './search-box/search-box.component';
     ContactPageComponent,
     SearchBoxComponent,
   ],
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   exports: [
     HomePageComponent,
     AboutPageComponent,
