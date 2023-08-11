@@ -32,8 +32,8 @@ export class CountriesService {
     localStorage.setItem('cacheStore', JSON.stringify(this.cacheStore));
   }
   private loadToLocalStorage() {
-    const cacheStore = localStorage.getItem('cacheStore');
-    if (cacheStore) return;
+    let cacheStore = localStorage.getItem('cacheStore');
+    if (!cacheStore) return;
 
     this.cacheStore = JSON.parse(cacheStore!);
   }
